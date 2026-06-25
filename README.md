@@ -32,7 +32,7 @@ You will be prompted for:
 | Batch Time, sec | `batch_time_sec` | Batch Time (s) |
 | *(derived)* | `batch_time_h` | Batch Time (h) |
 | Batch Time (since inoc.), sec | `eft_sec` | EFT (s) |
-| *(derived)* | `eft_h` | EFT, h |
+| *(derived)* | `eft_h` | EFT (h) |
 | Phase | `phase` | Phase |
 | Phase Time, sec | `phase_time_sec` | Phase Time (s) |
 | Foam, - | `foam` | Foam Sensor |
