@@ -8,7 +8,7 @@ Transforms raw Infors bioreactor CSV exports into a clean, database-ready format
 - Renames all columns to `snake_case` database-safe names
 - Adds `batch_time_h` (batch time in hours) and `eft_h` (elapsed fermentation time in hours)
 - Removes `AnalogIO1` and `AnalogIO2` columns
-- Prompts for `tank_id` and `experiment_id`, fills every row with the provided values
+- Prompts for `tank_id`, fills every row with the provided value.
 - Outputs standard comma-separated CSV
 
 ## Usage
