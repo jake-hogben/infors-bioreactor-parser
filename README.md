@@ -22,7 +22,6 @@ python parse_bioreactor.py "Raw file.csv" "Parsed file.csv"
 
 You will be prompted for:
 - **Tank ID** – e.g. `R1`, `R2`
-- **Experiment ID** – e.g. `PD-0001`
 
 ## Column mapping
 
@@ -59,4 +58,3 @@ You will be prompted for:
 | OptekODsensor1.OD | `optek_od` | Optek OD |
 | OD600, - | `od600` | OD600 |
 | *(added)* | `tank_id` | Tank ID |
-| *(added)* | `experiment_id` | Experiment ID |

@@ -68,7 +68,6 @@ COLUMN_ORDER = [
     'optek_od',
     'od600',
     'tank_id',
-    'experiment_id',
 ]
 
 
@@ -97,12 +96,11 @@ def clean_columns(df: pd.DataFrame) -> pd.DataFrame:
     return df.rename(columns=rename)
 
 
-def add_derived_columns(df: pd.DataFrame, tank_id: str, experiment_id: str) -> pd.DataFrame:
-    """Add batch_time_h, eft_h, tank_id, and experiment_id."""
+def add_derived_columns(df: pd.DataFrame, tank_id: str) -> pd.DataFrame:
+    """Add batch_time_h, eft_h, and tank_id."""
     df['batch_time_h'] = pd.to_numeric(df['batch_time_sec'], errors='coerce') / 3600
     df['eft_h'] = pd.to_numeric(df['eft_sec'], errors='coerce') / 3600
     df['tank_id'] = tank_id
-    df['experiment_id'] = experiment_id
     return df
 
 
@@ -116,12 +114,11 @@ def reorder_columns(df: pd.DataFrame) -> pd.DataFrame:
 def parse(input_path: str, output_path: str = None) -> str:
     """Run the full parse pipeline. Returns the path of the output file."""
     print(f"\nInput:  {input_path}")
-    tank_id = input("Tank ID (e.g. R1):           ").strip()
-    experiment_id = input("Experiment ID (e.g. PD-0001): ").strip()
+    tank_id = input("Tank ID (e.g. R1): ").strip()
 
     df = read_raw(input_path)
     df = clean_columns(df)
-    df = add_derived_columns(df, tank_id, experiment_id)
+    df = add_derived_columns(df, tank_id)
     df = reorder_columns(df)
 
     if output_path is None:
