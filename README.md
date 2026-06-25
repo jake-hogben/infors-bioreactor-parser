@@ -26,37 +26,37 @@ You will be prompted for:
 
 ## Column mapping
 
-| Raw name | Database name |
-|---|---|
-| Date Time UTC | `date_time_utc` |
-| Date Local Time | `date_local_time` |
-| Batch Time, sec | `batch_time_sec` |
-| *(derived)* | `batch_time_h` |
-| Batch Time (since inoc.), sec | `eft_sec` |
-| *(derived)* | `eft_h` |
-| Phase | `phase` |
-| Phase Time, sec | `phase_time_sec` |
-| Foam, - | `foam` |
-| AirFlow, l/min | `airflow_lpm` |
-| TotalFlow, l/min | `total_flow_lpm` |
-| Gas2Flow, l/min | `gas2_flow_lpm` |
-| GasMix | `gas_mix` |
-| Turbidity | `turbidity` |
-| Pump1, % | `pump1_pct` |
-| Pump1.Duration, - | `pump1_duration` |
-| Pump2, % | `pump2_pct` |
-| Pump2.Duration, - | `pump2_duration` |
-| Pump3, % | `pump3_pct` |
-| Pump3.Duration, - | `pump3_duration` |
-| Pump4, % | `pump4_pct` |
-| Pump4.Duration, - | `pump4_duration` |
-| Stirrer, 1/min | `stirrer_rpm` |
-| Temperature, °C | `temperature_degc` |
-| AnalogIO1, % | *(removed)* |
-| AnalogIO2, % | *(removed)* |
-| pH, - | `ph` |
-| pO2, % | `po2_pct` |
-| OptekODsensor1.OD | `optek_od` |
-| OD600, - | `od600` |
-| *(added)* | `tank_id` |
-| *(added)* | `experiment_id` |
+| Raw name | Database name | Human readable name |
+|---|---|---|
+| Date Time UTC | `date_time_utc` | Date Time UTC |
+| Date Local Time | `date_local_time` | Date Time Local |
+| Batch Time, sec | `batch_time_sec` | Batch Time, s |
+| *(derived)* | `batch_time_h` | Batch Time, h |
+| Batch Time (since inoc.), sec | `eft_sec` | EFT, s |
+| *(derived)* | `eft_h` | EFT, h |
+| Phase | `phase` | Phase |
+| Phase Time, sec | `phase_time_sec` | Phase Time, s |
+| Foam, - | `foam` | Foam Sensor |
+| AirFlow, l/min | `airflow_lpm` | Airflow, L/min |
+| TotalFlow, l/min | `total_flow_lpm` | Total Flow, L/min |
+| Gas2Flow, l/min | `gas2_flow_lpm` | Gas 2 Flow, L/min |
+| GasMix | `gas_mix` | Gas Mix % |
+| Turbidity | `turbidity` | Turbidity |
+| Pump1, % | `pump1_pct` | Pump 1, % |
+| Pump1.Duration, - | `pump1_duration` | Pump 1 Duration |
+| Pump2, % | `pump2_pct` | Pump 2, % |
+| Pump2.Duration, - | `pump2_duration` | Pump 2 Duration |
+| Pump3, % | `pump3_pct` | Pump 3, % |
+| Pump3.Duration, - | `pump3_duration` | Pump 3 Duration |
+| Pump4, % | `pump4_pct` | Pump 4, % |
+| Pump4.Duration, - | `pump4_duration` | Pump 4 Duration |
+| Stirrer, 1/min | `stirrer_rpm` | Stirrer, RPM |
+| Temperature, °C | `temperature_degc` | Temperature, C |
+| AnalogIO1, % | *(removed)* | (removed) |
+| AnalogIO2, % | *(removed)* | (removed) |
+| pH, - | `ph` | pH |
+| pO2, % | `po2_pct` | DO, % |
+| OptekODsensor1.OD | `optek_od` | Optek OD |
+| OD600, - | `od600` | OD600 |
+| *(added)* | `tank_id` | Tank ID |
+| *(added)* | `experiment_id` | Experiment ID |
